@@ -2,7 +2,7 @@ import { FC, useState, useEffect } from 'react'
 
 const UserID:FC = () => {
 
-  const [user, setUser] = useState("1");
+
   
   
   
@@ -24,6 +24,8 @@ const UserID:FC = () => {
   useEffect (() => {
     console.log(userInfo)
   })
+  
+  const [user, setUser] = useState("Select a user");
 
   
 
@@ -40,9 +42,10 @@ const UserID:FC = () => {
   return (
     <form className='User'>
       <select value={user} onChange = {handleChange}>
-        <option value="0">User 1</option>
-        <option value="1">User 2</option>
-        <option value="2">User 3</option>
+      <option value= "nothing"> Select user</option>
+      <option value="0">User 1</option>
+      <option value="1">User 2</option>
+      <option value="2">User 3</option>
         
       </select>
     </form>
